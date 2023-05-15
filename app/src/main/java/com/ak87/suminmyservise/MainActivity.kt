@@ -11,5 +11,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater).also { setContentView(it.root) }
+
+        binding.simpleService.setOnClickListener {
+            startService(MyService.newIntent(this))
+
+        }
     }
 }
