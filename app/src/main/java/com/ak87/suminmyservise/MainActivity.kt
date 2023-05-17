@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater).also { setContentView(it.root) }
 
         binding.simpleService.setOnClickListener {
-            startService(MyService.newIntent(this))
+            startService(MyService.newIntent(this, 25))
 
         }
     }
